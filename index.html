@@ -579,6 +579,90 @@
         font-size: 30px;
       }
     }
+
+    .job-contact-box {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 210px;
+  background: #ffffff;
+  border: 1px solid #e6b549;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  z-index: 9999;
+}
+
+.job-contact-box h3 {
+  margin: 0 0 8px;
+  color: #13283b;
+  font-size: 19px;
+}
+
+.job-contact-box p {
+  margin: 0 0 15px;
+  color: #596a79;
+  font-size: 14px;
+}
+
+.job-contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.job-contact-actions a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.job-contact-actions a:hover {
+  transform: scale(1.08);
+}
+
+.job-email {
+  background: #13283b;
+  color: white;
+  font-size: 22px;
+}
+
+.job-whatsapp {
+  background: #ffffff;
+  border: 1px solid #25D366;
+}
+
+.job-whatsapp img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 700px) {
+  .job-contact-box {
+    position: fixed;
+    left: 10px;
+    bottom: 15px;
+    top: auto;
+    transform: none;
+    width: 185px;
+    padding: 12px;
+  }
+
+  .job-contact-box h3 {
+    font-size: 16px;
+  }
+
+  .job-contact-box p {
+    display: none;
+  }
+}
   </style>
 </head>
 
@@ -1080,5 +1164,34 @@ leadForm.addEventListener("submit", async function(e) {
   });
 </script>
 
+
+<div class="job-contact-box">
+  <h3>מחפש/ת עבודה?</h3>
+
+  <p>שלחו קורות חיים ונשמח לבדוק משרות מתאימות</p>
+
+  <div class="job-contact-actions">
+
+    <a
+      class="job-email"
+      href="mailto:job@hizdamnut.co.il?subject=קורות חיים - מועמד/ת"
+      title="שליחת קורות חיים במייל"
+      aria-label="שליחת קורות חיים במייל">
+      ✉
+    </a>
+
+    <a
+      class="job-whatsapp"
+      href="https://wa.me/972503918008?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%9E%D7%A6%D7%95%D7%A8%D7%A4%D7%99%D7%9D%20%D7%A7%D7%95%D7%A8%D7%95%D7%AA%20%D7%97%D7%99%D7%99%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9E%D7%94"
+      target="_blank"
+      rel="noopener"
+      title="שליחת קורות חיים בוואטסאפ"
+      aria-label="שליחת קורות חיים בוואטסאפ">
+      <img src="https://cdn.simpleicons.org/whatsapp/25D366"
+           alt="WhatsApp">
+    </a>
+
+  </div>
+</div>
 </body>
 </html>
