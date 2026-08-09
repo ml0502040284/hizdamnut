@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>הזדמנות | השמת עובדים מקרב המגזר החרדי</title>
+
+  <meta name="description"
+        content="הזדמנות - השמת עובדים מקרב המגזר החרדי. גיוס איכותי וממוקד לחברות וארגונים.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --navy: #13283b;
+      --navy-dark: #0b1b29;
+      --gold: #e6b549;
+      --gold-light: #f7e3a6;
+      --cream: #faf8f2;
+      --light: #f5f7f9;
+      --text: #425363;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: Arial, "Heebo", sans-serif;
+      direction: rtl;
+      color: var(--navy);
+      background: white;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    /* HEADER */
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #edf0f2;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo img {
+      height: 76px;
+      width: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #b88219;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 12% 35%, rgba(230,181,73,.18), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #ffffff 58%, #faf5e9 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -150px;
+      bottom: -180px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 80px solid rgba(19,40,59,.035);
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+      padding: 85px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      letter-spacing: -1px;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 3vw, 35px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #526373;
+      font-size: 21px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      min-height: 54px;
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 17px;
+      font-family: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 8px 24px rgba(181,132,30,.20);
+    }
+
+    .btn-primary:hover {
+      background: #f0c35b;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* TITLES */
+
+    .section-title {
+      font-size: clamp(34px, 4vw, 48px);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .title-line {
+      width: 60px;
+      height: 4px;
+      border-radius: 20px;
+      background: var(--gold);
+      margin: 0 auto 45px;
+    }
+
+    /* WHY */
+
+    .why {
+      background: var(--light);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid #e7ebee;
+      padding: 32px 25px;
+      border-radius: 15px;
+      transition: .2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(13,31,46,.08);
+    }
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #596a79;
+      font-size: 16px;
+    }
+
+    .experience {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .experience strong {
+      display: block;
+      color: var(--gold);
+      font-size: 58px;
+      line-height: 1;
+    }
+
+    .experience span {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .process-item {
+      padding: 28px 22px;
+    }
+
+    .process-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 21px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .process-item h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .process-item p {
+      color: #596a79;
+    }
+
+    /* FIELDS */
+
+    .fields {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .fields .section-title {
+      color: white;
+    }
+
+    .fields-list {
+      max-width: 970px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .field {
+      border: 1px solid rgba(230,181,73,.60);
+      background: rgba(255,255,255,.04);
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: 17px;
+    }
+
+    /* CLIENTS */
+
+    .clients {
+      background: white;
+    }
+
+    .client-logos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .client-logo {
+      min-height: 115px;
+      border: 1px dashed #cfd6dc;
+      border-radius: 12px;
+      background: #fafbfc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9aa5ad;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--cream);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .people {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .person {
+      height: 310px;
+      border-radius: 15px;
+      background:
+        linear-gradient(145deg, #e4e9ed, #f8f9fa);
+      border: 1px solid #dce2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #909ca5;
+      padding: 20px;
+    }
+
+    .about-text h2 {
+      font-size: 43px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #536473;
+      font-size: 19px;
+      margin-bottom: 22px;
+    }
+
+    .names {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--navy);
+      border-radius: 18px;
+      padding: 50px;
+      box-shadow: 0 20px 50px rgba(14,34,50,.15);
+    }
+
+    .contact-box h2 {
+      color: white;
+      font-size: 38px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .contact-box > p {
+      color: #d6dee4;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.25);
+      padding: 15px 16px;
+      background: white;
+      color: var(--navy);
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(230,181,73,.15);
+    }
+
+    form .btn {
+      width: 100%;
+      border: none;
+    }
+
+    .whatsapp-direct {
+      text-align: center;
+      margin-top: 22px;
+    }
+
+    .whatsapp-direct a {
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #091722;
+      color: #b8c1c8;
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .header-inner {
+        justify-content: center;
+      }
+
+      .features,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .client-logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 65px 0;
+      }
+
+      .logo img {
+        height: 66px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .features,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .client-logos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .people {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .person {
+        height: 220px;
+      }
+
+      .contact-box {
+        padding: 35px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container header-inner">
+
+    <a href="#" class="logo">
+      <img src="logo.png" alt="הזדמנות">
+    </a>
+
+    <nav>
+      <a href="#why">למה הזדמנות?</a>
+      <a href="#process">איך זה עובד?</a>
+      <a href="#fields">תחומי גיוס</a>
+      <a href="#about">מי אנחנו?</a>
+      <a href="#contact">צרו קשר</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- מסך 1 -->
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <h1>השמת עובדים מקרב המגזר החרדי</h1>
+
+        <h2>מגייסים עובדים?</h2>
+
+        <p>
+          אנחנו עוזרים לחברות למצוא את האנשים שמתאימים באמת
+          לתפקיד ולארגון.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#contact"
+             class="btn btn-primary">
+            אני רוצה לגייס עובד/ת
+          </a>
+
+          <a
+            href="https://wa.me/972503918008?text=שלום%20הזדמנות,%20אני%20מעוניין/ת%20לגייס%20עובד/ת"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-secondary">
+            דברו איתנו בוואטסאפ
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- מסך 2 -->
+
+  <section class="why" id="why">
+
+    <div class="container">
+
+      <h2 class="section-title">למה הזדמנות?</h2>
+      <div class="title-line"></div>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+
+          <h3>איתור ממוקד</h3>
+
+          <p>
+            לא שולחים ערימות של קורות חיים.
+            מחפשים התאמה.
+          </p>
+        </div>
+
+
+        <div class="feature">
+          <div class="feature-icon">🤝</div>
+
+          <h3>ליווי אישי</h3>
+
+          <p>
+            אתם עובדים מול אנשים שמכירים את המשרה
+            ואת הצורך שלכם.
+          </p>
+        </div>
+
+
+        <div class="feature">
+          <div class="feature-icon">✓</div>
+
+          <h3>התמחות בגיוס איכותי</h3>
+
+          <p>
+            כספים, הנהלת חשבונות, ביטוח, בנקאות,
+            Back Office, תפעול ומשרות מקצועיות.
+          </p>
+        </div>
+
+
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+
+          <h3>מהירות בלי להתפשר</h3>
+
+          <p>
+            תהליך גיוס יעיל וממוקד.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="experience">
+        <strong>20</strong>
+        <span>שנות ניסיון</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- מסך 3 -->
+
+  <section id="process">
+
+    <div class="container">
+
+      <h2 class="section-title">איך זה עובד?</h2>
+      <div class="title-line"></div>
+
+
+      <div class="process-grid">
+
+        <div class="process-item">
+
+          <div class="process-number">1</div>
+
+          <h3>מכירים את המשרה</h3>
+
+          <p>
+            מבינים את התפקיד, הארגון ומי באמת
+            יכול להתאים.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">2</div>
+
+          <h3>מאתרים מועמדים</h3>
+
+          <p>
+            עובדים עם מאגרי מועמדים, פרסום
+            ואיתור אקטיבי.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">3</div>
+
+          <h3>מסננים ומראיינים</h3>
+
+          <p>
+            אתם מקבלים מועמדים שכבר עברו בדיקת התאמה,
+            עונים על הדרישות ומעוניינים.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">4</div>
+
+          <h3>סוגרים גיוס</h3>
+
+          <p>
+            מלווים אתכם ואת המועמד
+            עד הכניסה לתפקיד.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- תחומי גיוס -->
+
+  <section class="fields" id="fields">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        התחומים שאנחנו מגייסים אליהם
+      </h2>
+
+      <div class="title-line"></div>
+
+
+      <div class="fields-list">
+
+        <div class="field">כספים וחשבונאות</div>
+
+        <div class="field">ביטוח ופיננסים</div>
+
+        <div class="field">בנקאות</div>
+
+        <div class="field">Back Office ותפעול</div>
+
+        <div class="field">אדמיניסטרציה</div>
+
+        <div class="field">נדל״ן והנדסה</div>
+
+        <div class="field">תפקידים מקצועיים</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- חברות -->
+
+  <section class="clients">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        חברות שכבר עובדות איתנו
+      </h2>
+
+      <div class="title-line"></div>
+
+
+      <!--
+      בהמשך ניתן להחליף כל משבצת
+      בלוגו של חברה
+      -->
+
+      <div class="client-logos">
+
+        <div class="client-logo">
+          מקום ללוגו
+        </div>
+
+        <div class="client-logo">
+          מקום ללוגו
+        </div>
+
+        <div class="client-logo">
+          מקום ללוגו
+        </div>
+
+        <div class="client-logo">
+          מקום ללוגו
+        </div>
+
+        <div class="client-logo">
+          מקום ללוגו
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- מי אנחנו -->
+
+  <section class="about" id="about">
+
+    <div class="container about-inner">
+
+      <div class="people">
+
+        <div class="person">
+          מקום לתמונה<br>
+          יעל לוי
+        </div>
+
+        <div class="person">
+          מקום לתמונה<br>
+          משה לוין
+        </div>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <h2>מי אנחנו?</h2>
+
+        <p>
+          הזדמנות עובדת מתוך היכרות עמוקה עם עולם הגיוס
+          ועם האנשים שמאחורי קורות החיים כי גיוס טוב הוא
+          למצוא התאמה שמחזיקה לאורך זמן.
+        </p>
+
+        <div class="names">
+          יעל לוי ומשה לוין
+          <br>
+          הזדמנות
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- טופס -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          יש לכם משרה שצריך לאייש?
+        </h2>
+
+        <p>
+          ספרו לנו בקצרה את מי אתם מחפשים ונחזור אליכם.
+        </p>
+
+
+        <form id="leadForm">
+
+          <input
+            type="text"
+            id="name"
+            placeholder="שם"
+            required>
+
+
+          <input
+            type="text"
+            id="company"
+            placeholder="חברה">
+
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="טלפון"
+            required>
+
+
+          <textarea
+            id="job"
+            placeholder="איזה עובד/ת אתם מחפשים?"
+            required></textarea>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary">
+            חזרו אליי
+          </button>
+
+        </form>
+
+
+        <div class="whatsapp-direct">
+
+          <a
+            href="https://wa.me/972503918008"
+            target="_blank"
+            rel="noopener">
+
+            דברו איתנו עכשיו בוואטסאפ
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>הזדמנות</strong>
+
+  <br>
+
+  © 2026 כל הזכויות שמורות
+
+</footer>
+
+
+<script>
+
+document
+  .getElementById("leadForm")
+  .addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+      document.getElementById("name").value;
+
+    const company =
+      document.getElementById("company").value;
+
+    const phone =
+      document.getElementById("phone").value;
+
+    const job =
+      document.getElementById("job").value;
+
+
+    const message =
+`שלום הזדמנות,
+
+אני מעוניין/ת בגיוס עובד/ת.
+
+שם: ${name}
+חברה: ${company}
+טלפון: ${phone}
+
+איזה עובד/ת אנחנו מחפשים:
+${job}`;
+
+
+    const whatsappUrl =
+      "https://wa.me/972503918008?text=" +
+      encodeURIComponent(message);
+
+
+    window.open(
+      whatsappUrl,
+      "_blank"
+    );
+
+  });
+
+</script>
+
+</body>
+</html>
