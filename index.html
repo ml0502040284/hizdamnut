@@ -932,11 +932,13 @@
         </p>
 
 
-        <form id="leadForm">
+        <form id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="7cc41936-f965-4510-8603-cb58815e4f1f">
 
           <input
             type="text"
             id="name"
+            name="name"
             placeholder="שם"
             required>
 
@@ -944,18 +946,21 @@
           <input
             type="text"
             id="company"
+            name="company"
             placeholder="חברה">
 
 
           <input
             type="tel"
             id="phone"
+            name="phone"
             placeholder="טלפון"
             required>
 
 
           <textarea
             id="job"
+            name="job"
             placeholder="איזה עובד/ת אתם מחפשים?"
             required></textarea>
 
@@ -1009,7 +1014,7 @@
 
 <script>
 
-document
+/*document
   .getElementById("leadForm")
   .addEventListener("submit", function(event) {
 
@@ -1051,8 +1056,28 @@ ${job}`;
       "_blank"
     );
 
-  });
+  });*/
 
+const leadForm = document.getElementById("leadForm");
+leadForm.addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = new FormData(leadForm);
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+        });
+    const result = await response.json();
+    if (result.success) {
+      alert("פנייתך נשלחה");
+      leadForm.reset();
+      } else {
+      alert("אירעה שגיאה בשליחת הפנייה. נסו שוב.");
+      }
+    } catch (error) {
+    alert("אירעה שגיאה בשליחת הפנייה. נסו שוב.");
+    }
+  });
 </script>
 
 </body>
