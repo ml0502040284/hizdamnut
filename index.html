@@ -522,12 +522,20 @@
 
     @media (max-width: 600px) {
 
+      .container {
+        width: 92%;
+      }
+
       section {
-        padding: 65px 0;
+        padding: 48px 0;
+      }
+
+      .header-inner {
+        min-height: 68px;
       }
 
       .logo img {
-        height: 66px;
+        height: 54px;
       }
 
       .hero {
@@ -535,32 +543,69 @@
       }
 
       .hero-content {
-        padding: 70px 0;
+        padding: 44px 0 48px;
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 32px;
+        line-height: 1.18;
+        margin-bottom: 20px;
+        letter-spacing: -.4px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
       }
 
       .hero p {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 26px;
       }
 
       .buttons {
         flex-direction: column;
+        gap: 10px;
       }
 
       .btn {
         width: 100%;
+        min-height: 50px;
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .title-line {
+        margin-bottom: 30px;
       }
 
       .features,
       .process-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .feature {
+        padding: 24px 20px;
+      }
+
+      .process-item {
+        padding: 20px 10px;
+      }
+
+      .field {
+        padding: 10px 16px;
+        font-size: 15px;
       }
 
       .client-logos {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
 
       .people {
@@ -568,15 +613,41 @@
       }
 
       .person {
-        height: 220px;
+        height: 200px;
+      }
+
+      .about-inner {
+        gap: 30px;
+      }
+
+      .about-text h2 {
+        font-size: 32px;
+        margin-bottom: 14px;
+      }
+
+      .about-text p {
+        font-size: 17px;
+        margin-bottom: 18px;
       }
 
       .contact-box {
-        padding: 35px 20px;
+        padding: 28px 18px;
+        border-radius: 14px;
       }
 
       .contact-box h2 {
-        font-size: 30px;
+        font-size: 27px;
+        line-height: 1.25;
+      }
+
+      .contact-box > p {
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+
+      input,
+      textarea {
+        padding: 14px;
       }
     }
 
@@ -648,19 +719,49 @@
   .job-contact-box {
     position: fixed;
     left: 10px;
-    bottom: 15px;
+    right: 10px;
+    bottom: 10px;
     top: auto;
     transform: none;
-    width: 185px;
-    padding: 12px;
+    width: auto;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 12px;
   }
 
   .job-contact-box h3 {
-    font-size: 16px;
+    margin: 0;
+    font-size: 15px;
+    white-space: nowrap;
   }
 
   .job-contact-box p {
     display: none;
+  }
+
+  .job-contact-actions {
+    gap: 8px;
+  }
+
+  .job-contact-actions a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .job-email {
+    font-size: 19px;
+  }
+
+  .job-whatsapp img {
+    width: 26px;
+    height: 26px;
+  }
+
+  footer {
+    padding-bottom: 88px;
   }
 }
  .client-logo {
@@ -976,7 +1077,6 @@
   <section class="about" id="about">
 
     <div class="container about-inner">
-
       <div class="people">
 
         <div class="person">
